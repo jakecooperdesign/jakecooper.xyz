@@ -1,0 +1,16 @@
+=transition-all($pace: $base-speed, $easing: $base-easing)
+  transition: all $pace $easing
+
+.has-transitions
+	+transition-all
+
+.is-link-wrapper
+	text-decoration: none
+	color: inherit
+
+.has-bg-img
+	background-position: 50% 50%
+	background-size: cover
+
+.is-rounded
+	border-radius: $button-radius

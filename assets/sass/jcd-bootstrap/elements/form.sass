@@ -1,0 +1,40 @@
+form
+	margin: 2rem 0
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+input[type="number"],
+textarea
+	display: block
+	width: 100%
+	padding: 1rem
+	border: 1px solid grey(10)
+	cursor: pointer
+	+transition-all
+
+	&:focus
+		background: grey(5)
+		box-shadow: none
+		outline: none
+
+input[type="submit"],
+input[type="button"]
+
+	&:hover,
+	&:focus
+		background-color: black
+		color: white
+
+label
+	cursor: pointer
+
+label:not(.checkbox)
+	display: inline-block
+	margin-bottom: .5rem
+	font-weight: 400
+	color: grey(50)
+
+.form-group:not(:last-of-type)
+	margin-bottom: 2rem

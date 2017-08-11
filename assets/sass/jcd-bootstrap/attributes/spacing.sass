@@ -1,0 +1,22 @@
+$base-spacing: 1rem
+$sizes: ('small': .5, 'default': 1, 'medium': 2, 'large': 4)
+$directions: ('all', 'top', 'bottom', 'left', 'right')
+
+@each $property in (margin, padding)
+
+	@each $direction in $directions
+		$direction: toClassName($direction, 'all')
+
+		.is-#{$property}less#{$direction}
+			#{$property}: 0 !important
+
+		.is-#{$property}#{$direction}
+			#{$property}#{$direction}: 0 !important
+
+		@each $size, $value in $sizes
+			$size: toClassName($size, 'default')
+
+			.has-#{$property}#{$direction}#{$size}
+				+bp-responsive
+					#{$property}#{$direction}: $base-spacing * $value
+

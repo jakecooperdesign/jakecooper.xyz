@@ -1,0 +1,37 @@
+@each $direction in (left,right)
+	.is-float-#{$direction}
+		float: $direction
+
+@each $position in (relative, absolute, fixed)
+	.is-#{$position}
+		+bp-responsive
+			position: $position !important
+
+@each $display in (block, inline-block)
+	.is-#{$display}
+		+bp-responsive
+			display: $display !important
+
+@each $direction in (top, bottom, left, right)
+	.is-clung-#{$direction}
+		+bp-responsive
+			position: absolute
+			#{$direction}: 0
+
+.is-overlay
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+.has-margin-auto
+	+bp-responsive
+	    margin-left: auto
+	    margin-right: auto
+
+.is-clearfix:after
+	clear: both
+	content: " "
+	display: table
+

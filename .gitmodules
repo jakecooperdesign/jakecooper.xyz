@@ -1,0 +1,3 @@
+[submodule "assets/sass/jcd-bootstrap"]
+	path = assets/sass/jcd-bootstrap
+	url = git@github.com:jakecooperdesign/jcd-bootstrap.git

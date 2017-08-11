@@ -1,0 +1,10 @@
+@each $color, $hex in $colors
+
+	@each $size, $width in $border-sizes
+		$size: toClassName($size, 'default')
+
+		@each $direction in ('all', 'top', 'left', 'bottom', 'right')
+			$direction: toClassName($direction, 'all')
+
+			.has-border#{$direction}-#{$color}#{$size}
+				border#{$direction}: $width solid $hex

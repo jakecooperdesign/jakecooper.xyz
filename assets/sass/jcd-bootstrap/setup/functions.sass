@@ -1,0 +1,19 @@
+@function grey($amt) 
+	@return darken(white, $amt)
+
+@function bp($bp)
+	@return map-get($bps, $bp)
+
+@function color($key)
+	@return map-get($colors, $key)
+	
+@function fs( $level, $ratio: $font-ratio) 
+	$size: 1rem
+
+	@for $i from 1 through $level
+		$size: $size * (1 + $ratio)
+
+	@return $size
+
+@function toClassName($prop, $default, $return: null, $sep: '-')
+	@return if($prop == $default, $return, $sep + $prop)

@@ -1,0 +1,41 @@
+
+.container
+	width: $container-small
+	margin-left: auto
+	margin-right: auto
+	display: block
+
+	+from($container-width + $container-buffer * 2)
+		width: 100%
+		max-width: $container-width
+
+	+from($container-max + $container-buffer * 2)
+		max-width: $container-max
+
+.columns
+	margin-left: -1 * $grid-gutter
+	margin-right: -1 * $grid-gutter
+	flex-wrap: wrap
+	display: flex
+
+.column
+	+from(bp('sm'))
+		padding-left: $grid-gutter
+		padding-right: $grid-gutter
+		flex: 1
+
+.has-vert-centered-children
+	align-items: center
+
+
+@for $i from 1 through $grid-count
+	&.is-offset-#{$i}
+		+bp-responsive
+			margin-left: ($i / 12) * 100%
+	
+	.column.is-#{$i}
+		@extend .is-flex-none
+	
+	.is-#{$i}
+		+bp-responsive
+			width: ($i / 12) * 100%

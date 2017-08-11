@@ -1,0 +1,36 @@
+.serif
+	font-family: $font-serif !important
+
+.sans
+	font-family: $font-sans !important
+
+@each $direction in (left,right,center)
+	.has-text-#{$direction}
+		+bp-responsive
+			text-align: $direction
+
+.is-caps
+	text-transform: uppercase !important
+
+@for $weight from 1 through 9
+	.is-weight-#{$weight}00
+		font-weight: #{$weight}00 !important
+
+.is-normal,
+.is-style-normal
+	font-style: normal !important
+
+.is-fs-0
+	font-size: $base-font-size !important
+
+@for $i from 1 through 6
+	.is-fs-#{$i}
+		+bp-responsive
+			font-size: fs($i) !important
+
+	h#{$i}
+		font-size: fs(abs($i - 6 - 1))
+
+@each $label, $value in $font-tracking
+	.is-tracked-#{$label}
+		letter-spacing: $value

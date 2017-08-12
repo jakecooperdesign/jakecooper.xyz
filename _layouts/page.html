@@ -1,14 +1,20 @@
 ---
-layout: default
+layout: base
 ---
-<article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</article>
+<header class="page-header has-padding-vert-large has-padding-left-xl is-9 has-margin-top-large">
+	<p class="is-small is-tracked-caps is-marginless is-color-accent">{{page.date | date: "%Y / %m"}}</p>
+	<h1 class="is-marginless leading-1">{{page.title}}</h1>
+	{% if page.description %}
+		<p class="leading-2">{{page.description}}</p>
+	{% endif %}
+	{% if page.categories %}
+		<footer class="has-padding-top-medium">
+			{% for tag in page.categories|split: ", " %}
+				<a href="#" class="is-link-wrapper is-tracked-caps is-small is-color-accent has-margin-right is-color-grey-hover">#{{tag}}</a>
+			{% endfor %}
+		</footer>
+	{% endif %}
+</header>
+<section class="page-body has-padding-horiz-xl is-8">
+	{{content}}
+</section>

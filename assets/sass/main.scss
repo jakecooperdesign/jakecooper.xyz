@@ -1,5 +1,40 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css?family=Proza+Libre|Rubik');
+
+@function grey($amt) {
+	@return darken(white, $amt);
+}
+
+$font-sans: 'Rubik', Helevetica, Arial, sans-serif;
+$font-serif: $font-sans;
+
+$color-primary: rgb(1,87,87);
+$color-accent: rgb(128,165,138);
+$color-tertiary: rgb(201,230,210);
+
+$base-font-small: .75rem !default
+
+$colors: (
+	white: white, 
+	offwhite: grey(3), 
+	light: grey(30), 
+	grey: grey(50), 
+	black: black, 
+	accent: $color-accent, 
+	primary: $color-primary, 
+	tertiary: $color-tertiary
+);
+
+$sizes: (
+	'small': .5, 
+	'default': 1, 
+	'medium': 2, 
+	'large': 4,
+	'xl': 8
+);
+
+
 @import "jcd-bootstrap/jcd-bootstrap.sass";
 @import "shame.sass";
 // @import "normalize";

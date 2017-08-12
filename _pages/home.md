@@ -1,5 +1,6 @@
 ---
-title: Home
+title: site.title
+description: site.description
 layout: home
 permalink: /
 ---

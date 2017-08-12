@@ -5,5 +5,27 @@
 	text-transform: uppercase
 	letter-spacing: map-get($font-tracking, 'loose') 
 
-.leading-0
-	line-height: 1 !important
+@for $i from 0 through 3
+	.leading-#{$i}
+		line-height: 1 + .5 * $i !important
+
+h1,h2,h3,h4,h5,h6
+	font-family: $font-serif
+	font-weight: 300
+
+.post-tease
+	+transition-all
+	
+	&:hover 
+		padding-top: spacing('large')
+		padding-bottom: spacing('large')
+		background-color: grey(3)
+
+		.post-body
+			max-height: 400px
+
+	.post-body
+		max-height: 0
+		overflow: hidden
+		padding: 0
+		+transition-all

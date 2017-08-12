@@ -2,31 +2,14 @@
 layout: base
 ---
 
-<!-- {% include header.html %} -->
-
-<header class="site-header has-padding-top-large">
-	<div class="container">
-		<div class="is-6-md">
-			<h1 class="has-margin-top-large is-marginless-bottom">{{site.title}}</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi pariatur harum magni! Repellat iste, numquam mollitia! Nisi aliquam optio autem, repellendus ex eos ea est blanditiis quas molestiae eius laudantium.</p>
-		</div>
+<header class="page-header has-padding-top-large has-padding-bottom-large has-padding-left-xl has-padding-right-xl">
+	<div class="is-6-md">
+		<h1 class="has-margin-top-large is-marginless-bottom">{{site.title}}</h1>
+		<p class="leading-2">{{site.description}}</p>
 	</div>
 </header>
-
-<main class="site-body">
-	<div class="container">
-		<section class="articles">
-			<article class="post">
-				<header>
-					<p class="is-small is-tracked-caps is-marginless">2017</p>
-					<h3 class="is-marginless leading-0">Hello Dolly</h3>
-				</header>
-			</article>
-		</section>
-		<!-- {{ content }} -->
-	</div>
-</main>
-
-<div class="has-bg-grey-2 has-margin-top-large">
-	{% include footer.html %}
-</div>
+<section class="articles">
+	{% for post in site.posts %}
+		{% include post-tease.html %}
+	{% endfor %}
+</section>

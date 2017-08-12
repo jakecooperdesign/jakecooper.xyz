@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var plumber     = require('gulp-plumber');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var gcmq        = require('gulp-group-css-media-queries');
 
 var settings = {
     sass_dir: 'assets/sass',
@@ -54,6 +55,7 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(gcmq())
         .pipe(gulp.dest('_site/' + settings.css_dir))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest(settings.css_dir));
@@ -64,9 +66,12 @@ gulp.task('sass', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch(['**/*.scss','**/*.sass'], ['sass']);
+    gulp.watch(['assets/**/*.scss','assets/**/*.sass'], ['sass']);
     gulp.watch([
         '**/*.html', 
+        '**/*.md',
+        // 'assets/js/**/*.js',
+        '**/*.markdown',
         '!_site/**/*.html'
     ], ['jekyll-rebuild']);
 });

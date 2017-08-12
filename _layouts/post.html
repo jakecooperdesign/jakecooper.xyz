@@ -1,15 +1,23 @@
 ---
-layout: default
+layout: base
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
-
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
+<article class="post container-pad has-padding-vert-xl">
+	<header class="page-header">
+		<p class="is-small is-tracked-caps is-marginless is-color-accent">
+			{{page.date | date: "%Y / %m"}}
+			{% comment %}
+				&emsp;|&emsp;
+				{% for tag in page.tags %}
+					<a href="#" class="is-link-wrapper is-tracked-caps is-small is-color-accent has-margin-right is-color-grey-hover">#{{tag}}</a>
+				{% endfor %}
+			{% endcomment %}
+		</p>
+		<h1 class="is-marginless leading-1 is-fs-3 is-fs-6-md">{{page.title}}</h1>
+		{% if page.description %}
+			<p class="leading-2">{{page.description}}</p>
+		{% endif %}
+	</header>
+	<section class="post-body has-margin-top-large">
+		{{content}}
+	</section>
 </article>

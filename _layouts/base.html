@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <meta charset="utf-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-	  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-	  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-	  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-	  <script src="https://use.fontawesome.com/974aa2777b.js" async></script>
-	</head>
-
+	{% include head.html %}
 	<body>
-		<section class="page-body has-padding-right">
-			<nav class="has-padding-vert has-padding-horiz-xl has-border-bottom-offwhite">
+		<section class="site-body">
+			<nav class="container-pad has-padding-vert has-border-bottom-offwhite is-fixed to-top to-left is-wide has-bg-white is-top">
 				<a class="has-margin-right is-link-wrapper is-color-accent is-color-grey-hover" href="{{ "/" | prepend: site.baseurl }}">Home</a>
 				<a class="has-margin-right is-link-wrapper is-color-accent is-color-grey-hover" href="#">About</a>
 				<a class="has-margin-right is-link-wrapper is-color-accent is-color-grey-hover" href="#">Contact</a>
 			</nav>
-			<main class="site-body">
-				{{content}}
+			<main class="page-body">
+				<div id="barba-wrapper">
+					<div class="barba-container">
+						{{content}}
+					</div>
+				</div>
+				<footer class="container-pad has-padding-bottom">
+					<p class="is-small is-tracked-caps is-color-grey"><span class="has-padding-vert has-border-top-offwhite">Jake Cooper &copy; 2017</span></p>
+				</footer>
 			</main>
 		</section>
-		<aside class="is-fixed to-top to-right is-align-center is-centered is-tall is-flex has-bg-offwhite has-border-left-white">
-			<nav class="is-fs-1">
+		<aside class="social-bar">
+		<!-- <aside class="social-bar is-fixed-md to-top to-right is-align-center is-centered is-tall is-flex-md has-border-left-offwhite is-top has-bg-white"> -->
+			<nav class="is-fs-0">
 				{% assign networks = "facebook, twitter, dribbble, behance, instagram" | split: ", " %}
 				{% for social in networks %}
-					<a href="#" class="is-block has-padding leading-0 has-bg-offwhite-hover"><i class="fa fa-fw fa-{{social}}"></i></a>
+					<a href="#" class="social-link"><i class="fa fa-fw fa-{{social}}"></i></a>
+					<!-- <a href="#" class="is-block-md has-padding leading-0 has-bg-offwhite-hover"><i class="fa fa-fw fa-{{social}}"></i></a> -->
 				{% endfor %}
 			</nav>
 		</aside>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+		<script src="{{ '/assets/js/scripts.js' : prepend: site.baseurl }}"></script>
 	</body>
 </html>

@@ -1,31 +1,37 @@
-.is-vh
-	height: 100vh
+html, body 
+	font-family: $base-font-family
+	line-height: $base-line-height
+	font-weight: $font-weight-normal
+
+@function leading($value, $multiplier: .5)
+	@return 1 + $multiplier * $value
+
+@for $i from 0 through 3
+	.leading-#{$i}
+		line-height: leading($i) !important
+
+@function fs( $level, $ratio: $font-ratio) 
+	$size: 1rem
+	@if ($level == 0)
+		@return $size
+	@for $i from 1 through $level
+		$size: $size * (1 + $ratio)
+
+	@return $size
+
+@for $i from 0 through 6
+	.is-fs-#{$i}
+		+bp-responsive
+			font-size: fs($i) !important
 
 .is-tracked-caps
 	text-transform: uppercase
 	letter-spacing: map-get($font-tracking, 'loose') 
 
-@for $i from 0 through 3
-	.leading-#{$i}
-		line-height: 1 + .5 * $i !important
+.is-top
+	z-index: 99999
 
-h1,h2,h3,h4,h5,h6
-	font-family: $font-serif
-	font-weight: 300
-
-.post-tease
-	+transition-all
-	
-	&:hover 
-		padding-top: spacing('large')
-		padding-bottom: spacing('large')
-		background-color: grey(3)
-
-		.post-body
-			max-height: 400px
-
-	.post-body
-		max-height: 0
-		overflow: hidden
-		padding: 0
-		+transition-all
+b,
+strong,
+.is-strong
+	font-weight: 500 !important

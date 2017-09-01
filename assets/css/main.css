@@ -1830,6 +1830,17 @@ h6 {
   max-width: 600px;
 }
 
+.post-body blockquote {
+  border-left: 1px solid #80a58a;
+  margin-left: 0;
+  font-weight: 300;
+  color: gray;
+  padding: 0 2rem;
+  margin: 2rem 0 !important;
+  line-height: 2;
+  display: block;
+}
+
 .post-body p,
 .post-body img,
 .post-body figure,
@@ -1843,7 +1854,8 @@ h6 {
 .post-body h3,
 .post-body h4,
 .post-body h5,
-.post-body h6 {
+.post-body h6,
+.post-body blockquote {
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
 }
@@ -1879,11 +1891,6 @@ h6 {
 
 .post-body h1 {
   font-size: 4.21399rem;
-}
-
-.post-body h1,
-.post-body h2 {
-  font-weight: 300;
 }
 
 .post-body h3,
@@ -1967,6 +1974,18 @@ b,
 strong,
 .is-strong {
   font-weight: 500 !important;
+}
+
+.circle {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.is-flex-end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 @media screen and (min-width: 720px) {

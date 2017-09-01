@@ -4,9 +4,9 @@
 	<body>
 		<section class="site-body">
 			<nav class="container-pad has-padding-vert has-border-bottom-offwhite is-fixed to-top to-left is-wide has-bg-white is-top">
-				<a class="has-margin-right is-link-wrapper is-color-accent is-color-grey-hover" href="{{ "/" | prepend: site.baseurl }}">Home</a>
-				<a class="has-margin-right is-link-wrapper is-color-accent is-color-grey-hover" href="#">About</a>
-				<a class="has-margin-right is-link-wrapper is-color-accent is-color-grey-hover" href="#">Contact</a>
+				{% for page in site.pages %}
+					<a class="has-margin-right is-link-wrapper is-color-accent is-color-grey-hover" href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a>
+				{% endfor %}
 			</nav>
 			<main class="page-body">
 				<div id="barba-wrapper">
@@ -20,12 +20,9 @@
 			</main>
 		</section>
 		<aside class="social-bar">
-		<!-- <aside class="social-bar is-fixed-md to-top to-right is-align-center is-centered is-tall is-flex-md has-border-left-offwhite is-top has-bg-white"> -->
 			<nav class="is-fs-0">
-				{% assign networks = "facebook, twitter, dribbble, behance, instagram" | split: ", " %}
-				{% for social in networks %}
-					<a href="#" class="social-link"><i class="fa fa-fw fa-{{social}}"></i></a>
-					<!-- <a href="#" class="is-block-md has-padding leading-0 has-bg-offwhite-hover"><i class="fa fa-fw fa-{{social}}"></i></a> -->
+				{% for social in site.social %}
+					<a href="{{social.link}}" class="social-link"><i class="fa fa-fw fa-{{social.name}}"></i></a>
 				{% endfor %}
 			</nav>
 		</aside>

@@ -1,0 +1,19 @@
+<article class="post-tease container-pad has-padding-vert has-padding-vert-medium-lg">
+	<header class="post-header is-flex-md is-align-center">
+		<p class="is-small is-tracked-caps is-marginless is-1-md is-color-accent">{{post.date | date: "%Y / %m"}}</p>
+		<h3 class="is-marginless leading-1 is-flex-expand is-fs-1 is-fs-2-md">
+			<a href="{{post.url}}" class="is-link-wrapper">{{post.title}}</a>
+		</h3>
+	</header>
+	<section class="post-body is-offset-1 is-7">
+		<p class="is-marginless has-padding-top-medium is-color-grey">
+			{{post.excerpt}}
+		</p>
+		<p class="is-marginless has-padding-top"><a href="{{post.url}}" class="btn btn-small btn-default">Keep Reading &rarr;</a></p>
+		<footer class="has-padding-top-medium">
+			{% for tag in post.categories|split: ", " %}
+				<a href="#" class="is-link-wrapper is-tracked-caps is-small is-color-accent has-margin-right is-color-grey-hover">#{{tag}}</a>
+			{% endfor %}
+		</footer>
+	</section>
+</article>				

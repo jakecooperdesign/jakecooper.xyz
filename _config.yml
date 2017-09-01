@@ -14,11 +14,25 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jakecooper.xyz" # the base hostname & protocol for your site
+
 author: 
   name: Jake Cooper Design
   url: http://www.jakecooperdesign.com
-twitter_username: jakecooper_JCD
-github_username:  jakecooperdesign
+social:
+  - name: facebook
+    link: http://facebook.com/jakecooperdesign
+  - name: instagram
+    link: http://instagram.com/jakecooperdesign
+  - name: dribbble
+    link: http://dribbble.com/jake-cooper
+  - name: behance
+    link: http://behance.net/jakecooperdesign
+  - name: github
+    link: https://github.com/jakecooperdesign
+  - name: twitter
+    link: https://twitter.com/@jakecooper_jcd
+  - name: pinterest
+    link: http://pinterest.com/jakecdesign
 
 # Build settings
 markdown: kramdown

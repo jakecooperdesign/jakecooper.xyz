@@ -1,16 +1,10 @@
 ---
 layout: base
 ---
-<article class="post container-pad has-padding-vert-xl">
+<article class="post container-pad has-padding-top-xl has-padding-bottom-medium">
 	<header class="page-header">
 		<p class="is-small is-tracked-caps is-marginless is-color-accent">
 			{{page.date | date: "%Y / %m"}}
-			{% comment %}
-				&emsp;|&emsp;
-				{% for tag in page.tags %}
-					<a href="#" class="is-link-wrapper is-tracked-caps is-small is-color-accent has-margin-right is-color-grey-hover">#{{tag}}</a>
-				{% endfor %}
-			{% endcomment %}
 		</p>
 		<h1 class="is-marginless leading-1 is-fs-3 is-fs-6-md">{{page.title}}</h1>
 		{% if page.description %}
@@ -20,4 +14,17 @@ layout: base
 	<section class="post-body has-margin-top-large">
 		{{content}}
 	</section>
+	{% if page.previous.url or page.next.url %}
+		<footer class="post-footer has-margin-top-xl is-6-md">
+			<nav class="is-flex">
+				{% if page.next.url %}{% assign link = page.next %}{% endif %}
+				{% if page.previous.url %}{% assign link = page.previous %}{% endif %}
+
+				<a href="{{link.url}}" class="has-padding has-bg-grey-2 is-color-white-hover has-bg-accent-hover is-link-wrapper is-flex is-align-center is-flex-expand is-justified">
+					<h3 class="is-fs-0 is-marginless">{{link.title}}</h3>
+					<p class="has-padding-left is-marginless">&rarr;</p>
+				</a>
+			</nav>
+		</footer>
+	{% endif %}
 </article>

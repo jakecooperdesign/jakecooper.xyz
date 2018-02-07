@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.13.0",
-    "font-awesome": "^4.6.3",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-group-css-media-queries": "^1.2.0",
@@ -20,6 +20,10 @@
     "normalize-scss": "^5.0.3"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
+    "barba.js": "^1.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-webpack": "^1.5.0",
     "jcd-bootstrap": "jakecooperdesign/jcd-bootstrap"
   }
 }

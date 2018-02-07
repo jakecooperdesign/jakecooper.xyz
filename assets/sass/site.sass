@@ -1,23 +1,6 @@
-@function leading($value, $multiplier: .5)
-	@return 1 + $multiplier * $value
-
-@function fs( $level, $ratio: $font-ratio) 
-	$size: 1rem
-
-	@if ($level == 0)
-		@return $size
-
-	@for $i from 1 through $level
-		$size: $size * (1 + $ratio)
-
-	@return $size
-
 h1,h2,h3,h4,h5,h6
 	line-height: leading(1)
 	font-weight: $font-weight-normal
-
-// h1,h2
-// 	font-weight: $font-weight-light
 
 .container-pad
 	padding-left: spacing('medium')
@@ -31,18 +14,22 @@ h1,h2,h3,h4,h5,h6
 	+transition-all
 	
 	&:hover 
-		padding-top: spacing('large')
-		padding-bottom: spacing('large')
-		background-color: grey(3)
+		+from(bp('sm'))
+			padding-top: spacing('large')
+			padding-bottom: spacing('large')
+			background-color: grey(3)
 
-		.post-body
-			max-height: 400px
+			.post-body
+				max-height: 400px
 
 	.post-body
 		max-height: 0
 		overflow: hidden
 		padding: 0
 		+transition-all
+
+		+until(bp('sm'))
+			display: none
 
 .post-body
 	max-width: 600px

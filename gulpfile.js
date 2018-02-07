@@ -22,6 +22,7 @@ var paths = {
             '**/*.html', 
             '**/*.md',
             '**/*.markdown',
+            'assets/js/**/*.js',
             '!_site/**/*',
             '!assets',
             '!node_modules',

@@ -18,5 +18,8 @@
     "gulp-sass": "^2.3.2",
     "normalize": "^0.3.1",
     "normalize-scss": "^5.0.3"
+  },
+  "dependencies": {
+    "jcd-bootstrap": "jakecooperdesign/jcd-bootstrap"
   }
 }

@@ -31,6 +31,20 @@ var FadeTransition = Barba.BaseTransition.extend({
 		newContainer.style.opacity = 0
 		newContainer.style.transform = 'translateX(-100px)'
 
+		const page_header = newContainer.querySelector('#page-header')
+
+		if (page_header) {
+			page_header.style.opacity = 0
+			anime({
+				targets: page_header,
+				opacity: 1,
+				translateY: [-100, 0],
+				easing: 'easeOutQuart',
+				duration: 1000,
+				delay: 300
+			})
+		}
+
 		anime({
 			targets: newContainer,
 			opacity: 1,
@@ -41,7 +55,8 @@ var FadeTransition = Barba.BaseTransition.extend({
 				_this.done()
 			}
 		})
-	}
+	},
+
 });
 
 Barba.Pjax.getTransition = function() {

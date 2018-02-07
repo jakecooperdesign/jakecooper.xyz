@@ -1,0 +1,13 @@
+@function leading($value, $multiplier: .5)
+	@return 1 + $multiplier * $value
+
+@function fs( $level, $ratio: $font-ratio) 
+	$size: 1rem
+
+	@if ($level == 0)
+		@return $size
+
+	@for $i from 1 through $level
+		$size: $size * (1 + $ratio)
+
+	@return $size

@@ -1808,16 +1808,6 @@ h6 {
   transition: all 0.5s ease-in-out;
 }
 
-.post-tease:hover {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  background-color: #f7f7f7;
-}
-
-.post-tease:hover .post-body {
-  max-height: 400px;
-}
-
 .post-tease .post-body {
   max-height: 0;
   overflow: hidden;
@@ -1870,15 +1860,15 @@ h6 {
 }
 
 .post-body h6 {
-  font-size: 1rem;
+  font-size: 1.77778rem;
 }
 
 .post-body h5 {
-  font-size: 1rem;
+  font-size: 1.77778rem;
 }
 
 .post-body h4 {
-  font-size: 1rem;
+  font-size: 1.77778rem;
 }
 
 .post-body h3 {
@@ -2484,6 +2474,16 @@ strong,
 
   .is-12-sm {
     width: 100%;
+  }
+
+  .post-tease:hover {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #f7f7f7;
+  }
+
+  .post-tease:hover .post-body {
+    max-height: 400px;
   }
 
   .is-fs-0-sm {
@@ -5123,6 +5123,10 @@ strong,
 
   .is-12-until-sm {
     width: 100%;
+  }
+
+  .post-tease .post-body {
+    display: none;
   }
 
   .is-fs-0-until-sm {

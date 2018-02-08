@@ -1,5 +1,5 @@
 {
-  "name": "jcd-jekyll-base",
+  "name": "jakecooperdesign.xyz",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,6 +24,6 @@
     "barba.js": "^1.0.0",
     "gulp-browserify": "^0.5.1",
     "gulp-webpack": "^1.5.0",
-    "jcd-bootstrap": "jakecooperdesign/jcd-bootstrap"
+    "jcd-bootstrap": "https://github.com/jakecooperdesign/jcd-bootstrap"
   }
 }

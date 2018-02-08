@@ -1,13 +1,9 @@
-// @function grey($amt) {
-// 	@return darken(white, $amt);
-// }
-
 $font-ratio: (1/3);
 $font-sans: 'Rubik', Helevetica, Arial, sans-serif;
 $font-serif: $font-sans;
 
-// $color-primary: hsl(245, 15%, 31%);
-$color-primary: hsl(135, 21%, 38%);
+$color-primary: hsl(245, 15%, 31%);
+// $color-primary: hsl(135, 21%, 38%);
 $color-accent: hsl(136, 17%, 57%);
 $color-accent-light: hsl(136, 61%, 88%);
 $color-tertiary: hsl(139, 37%, 85%);
@@ -17,13 +13,6 @@ $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 500;
 $font-weight-headings: 500;
-
-$leadings: (
-	0: 1,
-	1: 1.2,
-	2: 1.4,
-	3: 1.8
-);
 
 $colors: (
 	white: white, 
@@ -37,35 +26,9 @@ $colors: (
 	tertiary: $color-tertiary
 );
 
-$sizes: (
-	'small': .5, 
-	'default': 1, 
-	'medium': 2, 
-	'large': 4,
-	'xl': 8
-);
-
-$size-1: 4.25rem;
-$size-2: 2.25rem;
-$size-3: 1.75rem;
-$size-4: 1.25rem;
-$size-5: 1.125rem;
-$size-6: 1rem;
-$size-7: .75rem;
-
 $font-tracking: (
 	'tight': -0.025em, 
 	'loose': 0.2125em
 );
 
 $button-radius: 0;
-
-$font-sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6;
-
-$z-indexes: (
-	0: -1,
-	1: 10,
-	2: 20,
-	3: 30
-	top: 9999
-);

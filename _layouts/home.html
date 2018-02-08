@@ -2,14 +2,16 @@
 layout: base
 ---
 
-<article class="page has-padding-vert-xl-lg has-padding-vert-large">
-	<header id="page-header" class="page-header container-pad has-padding-bottom-large">
-		<div class="is-6-md">
-			<h1 class="has-margin-top-large is-marginless-bottom is-fs-3 is-fs-6-md">{{site.title}}</h1>
-			<p class="leading-2">{{site.description}}</p>
+<article class="page">
+	<header id="page-header" class="page-header container-pad pt4 pb2">
+		<div class="columns-md">
+			<div class="column is-6-md">
+				<h1 class="mb0 is-size-1">{{site.title}}</h1>
+				<p>{{site.description}}</p>
+			</div>
 		</div>
 	</header>
-	<section class="articles">
+	<section class="articles pv2">
 		{% for post in site.posts %}
 			{% include post-tease.html %}
 		{% endfor %}

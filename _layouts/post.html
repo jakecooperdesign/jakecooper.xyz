@@ -1,30 +1,40 @@
 ---
 layout: base
 ---
-<article class="post container-pad has-padding-top-xl has-padding-bottom-medium">
-	<header id="page-header" class="page-header">
-		<p class="is-small is-tracked-caps is-marginless is-color-accent">
+<article class="post">
+
+	{% if page.image.src %}
+		<figure class="m0 p0">
+			<img src="{{page.image.src}}" alt="{{page.image.alt | default: page.title }}">
+		</figure>
+	{% endif %}
+
+	<header id="page-header" class="page-header is-6 pt4 container-pad">
+		<p class="is-size-7 is-tracked-caps pb1 has-text-accent">
 			{{page.date | date: "%Y / %m"}}
 		</p>
-		<h1 class="is-marginless leading-1 is-fs-3 is-fs-6-md">{{page.title}}</h1>
+
+		<h1 class="is-size-1 has-leading-1">{{page.title}}</h1>
+
 		{% if page.description %}
-			<p class="leading-2">{{page.description}}</p>
+		<p class="has-leading-2">{{page.description}}</p>
 		{% endif %}
 	</header>
-	<section class="post-body has-margin-top-large">
+
+	<section class="post-body pt4 content container-pad">
 		{{content}}
 	</section>
-	{% if page.previous.url or page.next.url %}
-		<footer class="post-footer has-margin-top-xl is-6-md">
-			<nav class="is-flex">
-				{% if page.next.url %}{% assign link = page.next %}{% endif %}
-				{% if page.previous.url %}{% assign link = page.previous %}{% endif %}
 
-				<a href="{{link.url}}" class="has-padding has-bg-grey-2 is-color-white-hover has-bg-accent-hover is-link-wrapper is-flex is-align-center is-flex-expand is-justified">
-					<h3 class="is-fs-0 is-marginless">{{link.title}}</h3>
-					<p class="has-padding-left is-marginless">&rarr;</p>
-				</a>
-			</nav>
-		</footer>
+	{% if page.previous.url or page.next.url %}
+	<footer class="post-footer mt4 pv4 container-pad is-6-md">
+		<nav>
+			{% if page.next.url %}{% assign link = page.next %}{% endif %}
+			{% if page.previous.url %}{% assign link = page.previous %}{% endif %}
+			<a href="{{link.url}}" class="is-flex is-centered is-spread is-link-wrapper has-bg-offwhite p1 has-text-white-hover has-bg-accent-hover">
+				<span class="is-fs-0 m0">{{link.title}}</span>
+				<span class="pl1 m0">&rarr;</span>
+			</a>
+		</nav>
+	</footer>
 	{% endif %}
 </article>

@@ -6,6 +6,9 @@ tags:
   - design
   - guide
   - how-to
+image: 
+  src: https://cdn-images-1.medium.com/max/2000/1*7c1mtSB0aYGX3nx6ZsDPuQ.jpeg
+  alt: Placeholder
 ---
 
 With tools like Squarespace, WordPress, and Wix (ugh), it's never been easier to make a website, yet still people struggle to make theirs "work". They can't get the traffic, the followers, or the job inquiries the site was made for in the first place. And worst of all they don't understand why. 
@@ -127,11 +130,3 @@ Your audience grows and changes over time, and a great way to grow with them is 
 
 ### Build a community
 Whether you're growing your newsletter list, a Facebook page, or just hosting webinars from your office, your audience is your micro-community of people that care about the same things you do. Your website is a great way to nurture and channel that community by being the hub where people can respond, interact, and feed each others passions.
-
-- - - -
-
-With these steps in place, you're on your way to a more experiential, customer-focused website that works with you rather than against you. I'd love to hear your feedback.
-
-*Which of these tips did you find most useful / which are you going to work on first? Did anything surprise you? Most importantly, how will your website work for you to solve your audience's problems?*
-
-Leave your comments on my [Facebook Page](https://www.facebook.com/jakecooperdesign), or tweet them directly to [@jakecooper_JCD](https://twitter.com/@jakecooper_jcd)!

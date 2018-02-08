@@ -1,43 +1,179 @@
-html, body 
-	font-family: $base-font-family
-	line-height: $base-line-height
-	font-weight: $font-weight-normal
+@function leading($label, $map: $leadings)
+	@return map-get($map, $label)
 
-@function leading($value, $multiplier: .5)
-	@return 1 + $multiplier * $value
+// html, body 
+// 	font-family: $base-font-family
+// 	line-height: $base-line-height
+// 	font-weight: $font-weight-normal
 
-@for $i from 0 through 3
-	.leading-#{$i}
-		line-height: leading($i) !important
+// @function leading($value, $multiplier: .5)
+// 	@return 1 + $multiplier * $value
 
-@function fs( $level, $ratio: $font-ratio) 
-	$size: 1rem
-	@if ($level == 0)
-		@return $size
-	@for $i from 1 through $level
-		$size: $size * (1 + $ratio)
+// @for $i from 0 through 3
+// 	.leading-#{$i}
+// 		line-height: leading($i) !important
 
-	@return $size
+// @function fs( $level, $ratio: $font-ratio) 
+// 	$size: 1rem
+// 	@if ($level == 0)
+// 		@return $size
+// 	@for $i from 1 through $level
+// 		$size: $size * (1 + $ratio)
 
-@for $i from 0 through 6
-	.is-fs-#{$i}
+// 	@return $size
+
+// @for $i from 0 through 6
+// 	.is-fs-#{$i}
+// 		+bp-responsive
+// 			font-size: fs($i) !important
+
+// .is-top
+// 	z-index: 99999
+
+// b,
+// strong,
+// .is-strong
+// 	font-weight: 500 !important
+
+// .is-flex-end
+// 	justify-content: flex-end
+
+// #site-nav
+// 	position: fixed
+// 	top: 0
+// 	left: 0
+
+@for $i from 1 through $column-count
+	$col-width: ($i/12) * 100%
+	.is-#{$i}
 		+bp-responsive
-			font-size: fs($i) !important
+			flex-grow: 0
+			flex-basis: $col-width
+			width: $col-width
+	.is-offset-#{$i}
+		+bp-responsive
+			margin-left: $col-width 
+
+.is-fixed
+	top: 0
+	left: 0
+
+.is-wide
+	width: 100%
+
+.is-link-wrapper
+	text-decoration: none
 
 .is-tracked-caps
 	text-transform: uppercase
 	letter-spacing: map-get($font-tracking, 'loose') 
 
-.is-top
-	z-index: 99999
+nav > a
+	&:not(:first-child)
+		margin-left: 1rem
 
-b,
-strong,
-.is-strong
-	font-weight: 500 !important
+.container-pad
+	padding-left: spacing('medium')
+	padding-right: spacing('medium')
+
+	+from(bp('lg'))
+		padding-left: spacing('large')
+		padding-right: spacing('large')
+
+.post-tease
+	+transition-all
+	
+	&:hover 
+		+from(bp('sm'))
+			padding-top: spacing('large')
+			padding-bottom: spacing('large')
+			background-color: grey(3)
+
+			.post-body
+				max-height: 400px
+
+	.post-body
+		max-height: 0
+		overflow: hidden
+		+transition-all
+
+		+until(bp('sm'))
+			display: none
+
+.is-flex
+	&.is-spread
+		justify-content: space-between
+
+.content
+	h2
+		color: color('accent')
+	h2
+		font-size: $size-2
+		&:not(:first-child)
+			margin-top: 6rem
+	h3
+		font-size: $size-5
+		font-weight: 600
+		@extend .is-tracked-caps
+		&:not(:first-child)
+			margin-top: 4.5rem
+	h4,h5,h6
+		&:not(:first-child)
+			margin-top: 2rem
+			margin-bottom: 1rem
+	h4
+		font-size: $size-4
+	h5
+		font-size: $size-5
+	h6
+		font-size: $size-6
+
+	ul
+		margin-left: 0
+		padding-left: 1rem
+
+@each $label,$leading in $leadings
+	.has-leading-#{$label}
+		line-height: $leading
+
+.button
+	display: inline-block
+	padding: $button-padding
+	text-decoration: none
+	border-radius: $button-radius
+	background: grey(5)
+	&:hover
+		background: grey(20)
+		color: color('primary')
+
+	&.is-small
+		padding: $button-padding-small
+
+	@each $label,$color in $colors
+		&.is-#{$label}
+			background-color: $color
+		&.is-#{$label}-hover:hover
+			background-color: $color
 
 .circle
 	border-radius: 50%
 
-.is-flex-end
-	justify-content: flex-end
+.is-flex 
+	+bp-responsive
+		display: flex !important
+
+		&.is-column
+			flex-direction: column
+		&.is-centered
+			align-items: center
+		&.is-justified
+			justify-content: center
+		
+		.is-narrow
+			flex: none
+		.is-expanded
+			flex: 1
+
+@each $label,$z in $z-indexes
+	.is-z-#{$label}
+		z-index: $z !important

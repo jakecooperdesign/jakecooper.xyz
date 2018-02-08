@@ -2263,7 +2263,7 @@ isstream@~0.1.2:
 
 jcd-bootstrap@jakecooperdesign/jcd-bootstrap:
   version "0.0.0"
-  resolved "https://codeload.github.com/jakecooperdesign/jcd-bootstrap/tar.gz/191d0adfc28925656460ecb21e01b34e829e7093"
+  resolved "https://codeload.github.com/jakecooperdesign/jcd-bootstrap/tar.gz/90c3f163fc672bbb39d5ddd5f2ebe3fd786ef3d6"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.3"

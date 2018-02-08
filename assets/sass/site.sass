@@ -1,88 +1,43 @@
-h1,h2,h3,h4,h5,h6
-	line-height: leading(1)
-	font-weight: $font-weight-normal
+// h1,h2,h3,h4,h5,h6
+// 	line-height: leading(1)
+// 	font-weight: $font-weight-normal
 
-.container-pad
-	padding-left: spacing('medium')
-	padding-right: spacing('medium')
+// .container-pad
+// 	padding-left: spacing('medium')
+// 	padding-right: spacing('medium')
 
-	+from(bp('lg'))
-		padding-left: spacing('xl')
-		padding-right: spacing('xl')
+// 	+from(bp('lg'))
+// 		padding-left: spacing('xl')
+// 		padding-right: spacing('xl')
 
-.post-tease
-	+transition-all
-	
-	&:hover 
-		+from(bp('sm'))
-			padding-top: spacing('large')
-			padding-bottom: spacing('large')
-			background-color: grey(3)
 
-			.post-body
-				max-height: 400px
+// .post-body
+// 	max-width: 600px
 
-	.post-body
-		max-height: 0
-		overflow: hidden
-		padding: 0
-		+transition-all
+// 	blockquote
+// 		border-left: 1px solid color('accent')
+// 		margin-left: 0
+// 		font-weight: $font-weight-light
+// 		color: grey(50)
+// 		// font-size: fs(1)
+// 		padding: 0 spacing('medium')
+// 		margin: spacing('medium') 0 !important
+// 		line-height: leading(2)
+// 		display: block
 
-		+until(bp('sm'))
-			display: none
+// 	p,img,figure,ul,ol,table,form,video,h1,h2,h3,h4,h5,h6,blockquote
+// 		margin-top: 1.75rem
+// 		margin-bottom: 1.75rem
 
-.post-body
-	max-width: 600px
+// 	h1,h2,h3,h4,h5,h6
+// 		margin-top: 2.5em
 
-	blockquote
-		border-left: 1px solid color('accent')
-		margin-left: 0
-		font-weight: $font-weight-light
-		color: grey(50)
-		// font-size: fs(1)
-		padding: 0 spacing('medium')
-		margin: spacing('medium') 0 !important
-		line-height: leading(2)
-		display: block
+// 	@each $level, $value in (6: 0, 5: 0, 4: 0, 3: 1, 2: 3, 1: 5)
+// 		h#{$level}
+// 			font-size: fs($value)
 
-	p,img,figure,ul,ol,table,form,video,h1,h2,h3,h4,h5,h6,blockquote
-		margin-top: 1.75rem
-		margin-bottom: 1.75rem
+// 	h3,h4
+// 		font-weight: $font-weight-bold
 
-	h1,h2,h3,h4,h5,h6
-		margin-top: 2.5em
-
-	@each $level, $value in (6: 0, 5: 0, 4: 0, 3: 1, 2: 3, 1: 5)
-		h#{$level}
-			font-size: fs($value)
-
-	h3,h4
-		font-weight: $font-weight-bold
-
-	h6
-		color: grey(50)
-
-.social-bar
-	padding: spacing('default') spacing('medium')
-
-	+until(bp('md'))
-		background-color: grey(2)
-
-	+from(bp('md'))
-		border-left: 1px solid grey(3)
-		position: fixed
-		top: 0
-		right: 0
-		z-index: 9999
-		background-color: white
-		height: 100%
-		display: flex
-		align-items: center
-		justify-content: center
-
-		.social-link
-			padding: spacing('small') 0
-			display: block
-	
-.social-link
-	padding-right: spacing('small')
+// 	h6
+// 		color: grey(50)

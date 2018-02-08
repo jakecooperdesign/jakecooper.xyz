@@ -3,12 +3,6 @@ layout: base
 ---
 <article class="post">
 
-	{% if page.image.src %}
-		<figure class="m0 p0">
-			<img src="{{page.image.src}}" alt="{{page.image.alt | default: page.title }}">
-		</figure>
-	{% endif %}
-
 	<header id="page-header" class="page-header is-6 pt4 container-pad">
 		<p class="is-size-7 is-tracked-caps pb1 has-text-accent">
 			{{page.date | date: "%Y / %m"}}
@@ -22,6 +16,15 @@ layout: base
 	</header>
 
 	<section class="post-body pt4 content container-pad">
+		{% if page.image.src %}
+		<figure class="m0 p0">
+			<img src="{{page.image.src}}" alt="{{page.image.alt | default: page.title }}">
+			{% if page.image.caption %}
+				<figcaption>{{page.image.caption}}</figcaption>
+			{% endif %}
+		</figure>
+		{% endif %}
+
 		{{content}}
 	</section>
 

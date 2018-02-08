@@ -723,6 +723,10 @@ textarea {
   font-size: 1rem;
 }
 
+.is-size-7 {
+  font-size: 0.75rem;
+}
+
 .has-text-accent,
 .has-text-accent-hover:hover {
   color: #7fa489 !important;
@@ -1953,11 +1957,6 @@ label:not(.checkbox) {
   margin-top: 6rem;
 }
 
-.content h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
 .content h3:not(:first-child) {
   margin-top: 4.5rem;
 }
@@ -2088,6 +2087,22 @@ nav > a:not(:first-child) {
 .is-fixed {
   top: 0;
   left: 0;
+}
+
+.content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.content figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.content figcaption {
+  font-size: 0.75rem;
+  text-align: right;
+  color: #7fa489;
 }
 
 @media screen and (min-width: 480px) {
@@ -2449,6 +2464,10 @@ nav > a:not(:first-child) {
 
   .is-size-6-sm {
     font-size: 1rem;
+  }
+
+  .is-size-7-sm {
+    font-size: 0.75rem;
   }
 
   .is-flex-sm {
@@ -3096,6 +3115,10 @@ nav > a:not(:first-child) {
     font-size: 1rem;
   }
 
+  .is-size-7-md {
+    font-size: 0.75rem;
+  }
+
   .is-flex-md {
     display: -webkit-box !important;
     display: -webkit-flex !important;
@@ -3729,6 +3752,10 @@ nav > a:not(:first-child) {
 
   .is-size-6-lg {
     font-size: 1rem;
+  }
+
+  .is-size-7-lg {
+    font-size: 0.75rem;
   }
 
   .is-flex-lg {
@@ -4370,6 +4397,10 @@ nav > a:not(:first-child) {
     font-size: 1rem;
   }
 
+  .is-size-7-until-lg {
+    font-size: 0.75rem;
+  }
+
   .is-flex-until-lg {
     display: -webkit-box !important;
     display: -webkit-flex !important;
@@ -4998,6 +5029,10 @@ nav > a:not(:first-child) {
     font-size: 1rem;
   }
 
+  .is-size-7-until-md {
+    font-size: 0.75rem;
+  }
+
   .is-flex-until-md {
     display: -webkit-box !important;
     display: -webkit-flex !important;
@@ -5624,6 +5659,10 @@ nav > a:not(:first-child) {
 
   .is-size-6-until-sm {
     font-size: 1rem;
+  }
+
+  .is-size-7-until-sm {
+    font-size: 0.75rem;
   }
 
   .is-flex-until-sm {

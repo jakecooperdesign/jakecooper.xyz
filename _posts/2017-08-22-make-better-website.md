@@ -7,8 +7,9 @@ tags:
   - guide
   - how-to
 image: 
-  src: https://cdn-images-1.medium.com/max/2000/1*7c1mtSB0aYGX3nx6ZsDPuQ.jpeg
+  src: https://picsum.photos/1920/1080/?image=308
   alt: Placeholder
+  caption: Lorem ipsum dolor sit amet.
 ---
 
 With tools like Squarespace, WordPress, and Wix (ugh), it's never been easier to make a website, yet still people struggle to make theirs "work". They can't get the traffic, the followers, or the job inquiries the site was made for in the first place. And worst of all they don't understand why. 

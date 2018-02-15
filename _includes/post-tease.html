@@ -1,12 +1,22 @@
-<article class="post-tease container-pad pv2">
+<article class="post-tease p4 has-border-top-offwhite">
 	<header class="post-header is-flex-md is-centered">
 		<p class="is-size-7 is-tracked-caps m0 is-1-md has-text-accent">{{post.date | date: "%y / %m"}}</p>
-		<h3 class="m0 is-expanded is-5-md is-size-3">
-			<a href="{{post.url}}" class="is-link-wrapper has-text-grey">{{post.title}}</a>
+		<h3 class="m0 is-expanded is-size-2">
+			<a href="{{post.url}}" class="is-link-wrapper">{{post.title}}</a>
 		</h3>
 	</header>
-	<section class="post-body pt1 is-offset-1 is-6-md">
-		{{post.excerpt}}
-		<p class="pt2"><a href="{{post.url}}" class="button is-accent has-text-accent-light has-bg-primary-hover">Keep Reading&ensp;&rarr;</a></p>
+	<section class="post-body is-offset-1">		
+		<div class="content has-text-grey pt2 pb4">
+			{% if post.image.src %}
+				<figure class="m0 p0">
+					<img src="{{post.image.src}}" alt="{{post.image.alt | default: post.title }}">
+					{% if post.image.caption %}
+					<figcaption>{{post.image.caption}}</figcaption>
+					{% endif %}
+				</figure>
+			{% endif %}
+			{{post.excerpt}}
+		</div>
+		<p><a href="{{post.url}}" class="is-link-wrapper has-text-accent">Keep Reading&ensp;&rarr;</a></p>
 	</section>
 </article>				

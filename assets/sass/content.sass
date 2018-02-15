@@ -1,0 +1,72 @@
+.content
+	p, dl, ol, ul, blockquote, pre, table,
+	h1,h2,h3,h4,h5,h6
+		max-width: 38rem
+		&:not(:last-child)
+			margin-bottom: $content-spacing
+
+	@for $level from 1 through 6
+		h#{$level}
+			font-size: fs($level)
+
+	h2
+		color: color('accent')
+		&:not(:first-child)
+			margin-top: 6rem
+	h3
+		&:not(:first-child)
+			margin-top: 4.5rem
+	h4,h5,h6
+		&:not(:first-child)
+			margin-top: 2rem
+			margin-bottom: 1rem
+
+	blockquote
+		background-color: color('offwhite')
+
+	ol
+		list-style: decimal outside
+		margin-left: 2em
+
+	ul
+		margin-left: 0
+		padding-left: 1rem
+		list-style: disc outside
+		ul
+			list-style-type: circle
+			ul
+				list-style-type: square
+
+	dd
+		margin-left: 2em
+
+	figure
+		margin-left: 2em
+		margin-right: 2em
+		text-align: center
+		&:not(:first-child)
+			margin-top: 2em
+		&:not(:last-child)
+			margin-bottom: 2em
+
+		img
+			display: inline-block
+
+		figcaption
+			font-style: italic
+
+	pre
+		overflow-x: auto
+		white-space: pre
+		word-wrap: normal
+
+	code
+		display: inline-block
+		font-size: .85em
+		padding: .25em .6em
+		color: color('primary-dark')
+		background-color: color('primary-light')
+		line-height: 1.2
+
+	table
+		min-width: 75%

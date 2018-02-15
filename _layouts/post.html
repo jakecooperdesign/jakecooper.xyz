@@ -3,7 +3,7 @@ layout: base
 ---
 <article class="post">
 
-	<header id="page-header" class="page-header is-6 pt4 container-pad">
+	<header id="page-header" class="page-header pt4 container-pad">
 		<p class="is-size-7 is-tracked-caps pb1 has-text-accent">
 			{{page.date | date: "%Y / %m"}}
 		</p>
@@ -29,8 +29,8 @@ layout: base
 	</section>
 
 	{% if page.previous.url or page.next.url %}
-	<footer class="post-footer mt4 pv4 container-pad is-6-md">
-		<nav>
+	<footer class="post-footer mt4 pv4 container-pad">
+		<nav class="content-width-base">
 			{% if page.next.url %}{% assign link = page.next %}{% endif %}
 			{% if page.previous.url %}{% assign link = page.previous %}{% endif %}
 			<a href="{{link.url}}" class="is-flex is-centered is-spread is-link-wrapper has-bg-offwhite p1 has-text-white-hover has-bg-accent-hover">

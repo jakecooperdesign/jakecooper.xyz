@@ -1,41 +1,58 @@
 @function tracking($key, $map: $font-tracking)
 	@return map-get($map, $key)
 
-nav > a
-	&:not(:first-child)
-		margin-left: 1rem
+h1,h2,h3,h4,h5,h6
+	font-family: $font-headings
+
+.content
+	p, dl, ol, ul, blockquote, pre, table,
+		font-family: $font-base
+		font-size: fs(5)
+		line-height: 1.5
+
+	figure,
+	blockquote
+		margin-left: -2rem !important
+
+	figure code
+		width: 100%
+		text-align: left
+		padding: 2rem
+		line-height: 1.4
+
+	blockquote
+		padding: 0 2rem
+		margin: 4rem 0
+		background-color: transparent
+		// background-color: color('offwhite')
+		border-left: 1px solid color('accent')
+		color: color('accent')
+		font-size: fs(3)
+		margin-left: 0
+		margin-right: 0
+		max-width: 48rem
+		
+		p
+			max-width: 100%
+			padding: 0
+			margin: 0
+			font-size: inherit
+
+.is-link-wrapper
+	color: inherit
 
 .is-tracked-caps
 	text-transform: uppercase
 	letter-spacing: tracking('loose')
 
 .container-pad
-	padding-left: spacing('medium')
-	padding-right: spacing('medium')
-
-	+from(bp('lg'))
-		padding-left: spacing('large')
-		padding-right: spacing('large')
+	padding-left: spacing('xl')
+	padding-right: spacing('xl')
 
 .post-tease
 	+transition-all
-	
 	&:hover 
-		+from(bp('sm'))
-			padding-top: spacing('large')
-			padding-bottom: spacing('large')
-			background-color: grey(3)
-
-			.post-body
-				max-height: 400px
-
-	.post-body
-		max-height: 0
-		overflow: hidden
-		+transition-all
-
-		+until(bp('sm'))
-			display: none
+		background-color: grey(3)
 
 .is-fixed
 	top: 0
@@ -53,3 +70,13 @@ nav > a
 		font-size: fs(7)
 		text-align: right
 		color: color('accent')
+
+.min-vh
+	min-height: 100vh
+
+.columns.is-gapless
+	margin-left: 0
+	margin-right: 0
+	.column
+		padding-left: 0
+		padding-right: 0

@@ -13,25 +13,36 @@
 		<link rel="stylesheet" href="{{ '/dist/css/main.css' | prepend: site.baseurl }}">
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+		<link href="https://fonts.googleapis.com/css?family=Rubik|Alegreya+Sans" rel="stylesheet">
 	</head>
 	<body>
-		<section class="site-body">
-			<nav id="site-nav" class="container-pad pv1 has-border-bottom-offwhite is-fixed is-wide has-bg-white is-z-top">
-				{% for page in site.pages %}
-					<a class="has-margin-right is-link-wrapper is-color-accent is-color-grey-hover" href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a>
-				{% endfor %}
-			</nav>
-			<section id="site-body" class="page-body mt4">
-				<div id="barba-wrapper">
-					<div class="barba-container">
-						{{content}}
-					</div>
+		<div class="columns is-gapless">
+			<div class="column is-3 min-vh has-border-right-offwhite">
+				<div class="p4">
+					<header class="site-header">
+						<h1 class="is-size-3"><a href="/" class="is-link-wrapper">{{site.title}}</a></h1>
+						<p class="is-size-7 has-text-light is-font-serif mt2">{{site.description}}</p>
+					</header>
+					<nav id="site-nav" class="is-flex is-column mv2">
+						{% for page in site.pages %}
+						<a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a>
+						{% endfor %}
+					</nav>
 				</div>
-				<footer class="container-pad pv1 mt2 has-border-top-offwhite">
+			</div>
+			<div class="column">
+				<section id="site-body" class="page-body">
+					<div id="barba-wrapper">
+						<div class="barba-container">
+							{{content}}
+						</div>
+					</div>
+				</section>
+				<footer class="container-pad pv1 has-border-top-offwhite">
 					<p class="is-small is-tracked-caps has-text-accent">Jake Cooper &copy; 2017</p>
 				</footer>
-			</section>
-		</section>
+			</div>
+		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>

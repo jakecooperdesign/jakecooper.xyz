@@ -1,0 +1,13 @@
+$cell-padding: .75rem
+table
+    td,th
+        padding: $cell-padding 0
+        text-align: left
+        &:not(:first-child)
+            padding-left: $cell-padding
+            text-align: right
+    td
+        border-top: 1px solid color('offwhite')
+    th
+        color: color('light')
+        font-weight: normal

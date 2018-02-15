@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Proza+Libre|Rubik:300,300i,400,400i,500,500i");
 
+table td,
+table th {
+  padding: 0.75rem 0;
+  text-align: left;
+}
+
+table td:not(:first-child),
+table th:not(:first-child) {
+  padding-left: 0.75rem;
+  text-align: right;
+}
+
+table td {
+  border-top: 1px solid color("offwhite");
+}
+
+table th {
+  color: color("light");
+  font-weight: normal;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -616,7 +637,7 @@ textarea {
 }
 
 .is-font-serif {
-  font-family: "Rubik", Helevetica, Arial, sans-serif !important;
+  font-family: "Alegreya Sans", "Rubik", Helvetica, Arial, sans-serif !important;
 }
 
 .is-font-headings {
@@ -624,7 +645,7 @@ textarea {
 }
 
 .is-font-base {
-  font-family: "Rubik", Helevetica, Arial, sans-serif !important;
+  font-family: "Alegreya Sans", "Rubik", Helvetica, Arial, sans-serif !important;
 }
 
 .has-text-left {
@@ -2036,29 +2057,60 @@ label:not(.checkbox) {
   min-width: 75%;
 }
 
-.content table td,
-.content table th {
-  padding: 0.75rem 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", Helevetica, Arial, sans-serif;
+}
+
+.content p,
+.content dl,
+.content ol,
+.content ul,
+.content blockquote,
+.content pre,
+.content table {
+  font-family: "Alegreya Sans", "Rubik", Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.content figure,
+.content blockquote {
+  margin-left: -2rem !important;
+}
+
+.content figure code {
+  width: 100%;
   text-align: left;
+  padding: 2rem;
+  line-height: 1.4;
 }
 
-.content table td:not(:first-child),
-.content table th:not(:first-child) {
-  padding-left: 0.75rem;
-  text-align: right;
+.content blockquote {
+  padding: 0 2rem;
+  margin: 4rem 0;
+  background-color: transparent;
+  border-left: 1px solid #7fa489;
+  color: #7fa489;
+  font-size: 1.75rem;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 48rem;
 }
 
-.content table td {
-  border-top: 1px solid #f7f7f7;
+.content blockquote p {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
 }
 
-.content table th {
-  color: #999999;
-  font-weight: normal;
-}
-
-nav > a:not(:first-child) {
-  margin-left: 1rem;
+.is-link-wrapper {
+  color: inherit;
 }
 
 .is-tracked-caps,
@@ -2068,8 +2120,8 @@ nav > a:not(:first-child) {
 }
 
 .container-pad {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 .post-tease {
@@ -2077,11 +2129,8 @@ nav > a:not(:first-child) {
   transition: all 0.5s ease-in-out;
 }
 
-.post-tease .post-body {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+.post-tease:hover {
+  background-color: #f7f7f7;
 }
 
 .is-fixed {
@@ -2103,6 +2152,20 @@ nav > a:not(:first-child) {
   font-size: 0.75rem;
   text-align: right;
   color: #7fa489;
+}
+
+.min-vh {
+  min-height: 100vh;
+}
+
+.columns.is-gapless {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.columns.is-gapless .column {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -2741,16 +2804,6 @@ nav > a:not(:first-child) {
 
   .is-offset-12-sm {
     margin-left: 100%;
-  }
-
-  .post-tease:hover {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    background-color: #f7f7f7;
-  }
-
-  .post-tease:hover .post-body {
-    max-height: 400px;
   }
 }
 
@@ -4022,11 +4075,6 @@ nav > a:not(:first-child) {
 
   .is-offset-12-lg {
     margin-left: 100%;
-  }
-
-  .container-pad {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 }
 
@@ -5929,9 +5977,5 @@ nav > a:not(:first-child) {
 
   .is-offset-12-until-sm {
     margin-left: 100%;
-  }
-
-  .post-tease .post-body {
-    display: none;
   }
 }

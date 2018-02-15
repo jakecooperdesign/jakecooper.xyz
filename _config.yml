@@ -2,6 +2,9 @@
 title: jakecooper.xyz
 timezone: UTC
 collections:
+  pages:
+    title: Pages
+    output: true
   posts:
     title: Posts
     output: true

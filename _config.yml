@@ -4,7 +4,9 @@ timezone: UTC
 collections:
   pages:
     title: Pages
-    output: true
+    output: false
+    permalink: "/:title/"
+    layout: post
   posts:
     title: Posts
     output: true

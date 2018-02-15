@@ -1,12 +1,12 @@
 ---
+title: How to Make a Better Website
+date: 2017-08-22 00:00:00 Z
+tags:
+- design
+- guide
+- how-to
 layout: post
-title:  "How to Make a Better Website"
-date:   2017-08-22
-tags:	
-  - design
-  - guide
-  - how-to
-image: 
+image:
   src: https://picsum.photos/1920/1080/?image=308
   alt: Placeholder
   caption: Lorem ipsum dolor sit amet.

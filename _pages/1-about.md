@@ -1,7 +1,7 @@
 ---
-layout: post
 title: About
-permalink: /about/
+permalink: "/about/"
+layout: post
 ---
 
 <img class="is-4-lg circle" src='{{ "/assets/imgs/headshot.jpg" | prepend:site.baseurl }}' alt="Headshot">

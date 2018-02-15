@@ -1,11 +1,11 @@
 ---
-layout: post
-title:  "What is a Brand?"
-date:   2017-08-07
+title: What is a Brand?
+date: 2017-08-07 00:00:00 Z
 tags:
-  - branding
-  - business
-  - design
+- branding
+- business
+- design
+layout: post
 ---
 
 After months of development you’re finally ready to launch the product your clients will adore. Your website is beautiful, and at the price you’ve set, no one could turn you down. You go to industry events to promote your work, and traffic to your site is growing everyday.

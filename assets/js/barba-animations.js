@@ -1,3 +1,7 @@
+var Barba = require('barba.js');
+var anime = require('animejs');
+var fitvids = require('fitvids');
+
 var FadeTransition = Barba.BaseTransition.extend({
     start: function () {
         Promise
@@ -62,6 +66,10 @@ var FadeTransition = Barba.BaseTransition.extend({
 Barba.Pjax.getTransition = function () {
     return FadeTransition;
 };
+
+Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
+    fitvids('.embed-container');
+});
 
 document.addEventListener('DOMContentLoaded', function (e) {
     Barba.Pjax.start();

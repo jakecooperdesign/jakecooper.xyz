@@ -5,8 +5,8 @@ var plumber     = require('gulp-plumber');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var gcmq        = require('gulp-group-css-media-queries');
-var webpack     = require('gulp-webpack');
-var browserify  = require('gulp-browserify') ;
+var browserify  = require('browserify');
+var source      = require('vinyl-source-stream');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
@@ -32,13 +32,15 @@ var config = {
     content: {
         base_dir: '_site',
         glob: [
-            '**/*.html',
-            '**/*.md',
-            '**/*.markdown',
-            'assets/js/**/*.js',
-            '!_site/**/*',
-            '!assets',
-            '!node_modules',
+            '_includes/**/*.html',
+            '_layouts/**/*.html',
+            '_posts/**/*.md',
+            '_posts/**/*.markdown',
+            './*.md',
+            './*.markdown',
+            '_pages/**/*.md',
+            '_pages/**/*.markdown',
+            '_config.yml',
         ]
     }
 };
@@ -89,12 +91,13 @@ gulp.task('sass', function () {
 });
 
 gulp.task('scripts', function(){
-    return gulp.src(config.js.index)
-        .pipe(browserify({
-            insertGlobals: true,
-        }))
+    return browserify(config.js.index)
+        .bundle()
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest('_site/' + config.js.dest))
         .pipe(gulp.dest(config.js.dest))
-})
+        .pipe(browserSync.reload({ stream: true }));
+});
 
 /**
  * Watch scss files for changes & recompile
@@ -102,6 +105,7 @@ gulp.task('scripts', function(){
  */
 gulp.task('watch', function () {
     gulp.watch(config.css.glob, ['sass']);
+    gulp.watch(config.js.glob, ['scripts']);
     gulp.watch(config.content.glob, ['jekyll-rebuild']);
 });
 

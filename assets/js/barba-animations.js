@@ -28,16 +28,20 @@ var FadeTransition = Barba.BaseTransition.extend({
         const _this = this
         const oldContainer = this.oldContainer
         const newContainer = this.newContainer
-        const page_header = newContainer.querySelector('#page-header')
 
+        window.scrollTo(0, 0)
         oldContainer.style.display = 'none'
         newContainer.style.visibility = 'visible'
-        window.scrollTo(0, 0)
+        newContainer.style.opacity = 0
+        newContainer.style.transform = 'translateX(-100px)'
+
+        const page_header = newContainer.querySelector('#page-header')
 
         if (page_header) {
+            page_header.style.opacity = 0
             anime({
                 targets: page_header,
-                opacity: [0,1],
+                opacity: 1,
                 translateY: [-100, 0],
                 easing: 'easeOutQuart',
                 duration: 1000,
@@ -47,8 +51,8 @@ var FadeTransition = Barba.BaseTransition.extend({
 
         anime({
             targets: newContainer,
-            opacity: [0,1],
-            translateX: [-100, 0],
+            opacity: 1,
+            translateX: 0,
             easing: 'easeOutQuart',
             duration: 1000,
             complete: function () {

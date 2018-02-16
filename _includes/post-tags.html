@@ -1,7 +1,5 @@
-<footer class="pt2">
-    <nav class="tags">
-        {% for tag in page.tags %}
-            <a href="/tags/{{tag | slugify}}" class="tag button btn-small is-accent has-text-white is-primary-hover is-tracked-caps is-size-8">{{tag}}</a>
-        {% endfor %}
-    </nav>
-</footer>
+<nav class="tags mt4">
+    {% for tag in page.tags %}
+        <a href="/tags/{{tag | slugify}}" class="tag button btn-small is-offwhite has-text-accent is-primary-hover is-tracked-caps is-size-8">{{tag}}</a>
+    {% endfor %}
+</nav>

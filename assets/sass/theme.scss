@@ -5,7 +5,6 @@ $font-headings: $font-sans;
 $font-base: $font-serif;
 
 $color-primary: hsl(245, 15%, 31%);
-// $color-primary: hsl(135, 21%, 38%);
 $color-accent: hsl(136, 17%, 57%);
 $color-accent-light: hsl(136, 61%, 88%);
 $color-tertiary: hsl(139, 37%, 85%);
@@ -32,6 +31,7 @@ $button-padding-small: .4em .8em;
 $colors: (
 	white: white, 
 	offwhite: grey(3), 
+	extralight: grey(9), 
 	light: grey(30), 
 	grey: grey(50), 
 	black: black, 
@@ -58,3 +58,5 @@ $button-radius: 0;
 
 $content-spacing: 1.75rem;
 $content-width-base: 38rem;
+
+$spacing-sizes: ('0': 0, '1': 1rem, '2': 2rem, '3': 3rem, '4': 4rem, '8': 8rem);

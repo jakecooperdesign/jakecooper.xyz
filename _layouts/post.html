@@ -20,18 +20,21 @@ layout: base
 		{% include featured-image.html %}
 		{{content}}
 		{% include post-tags.html %}
-	</section>
 
-	{% if page.previous.url or page.next.url %}
-	<footer class="post-footer pv4 container-pad">
-		<nav class="content-width-base">
-			{% if page.next.url %}{% assign link = page.next %}{% endif %}
-			{% if page.previous.url %}{% assign link = page.previous %}{% endif %}
-			<a href="{{link.url}}" class="is-flex is-centered is-spread is-link-wrapper has-bg-offwhite p1 has-text-white-hover has-bg-accent-hover">
-				<span class="is-fs-0 m0">{{link.title}}</span>
-				<span class="pl1 m0">&rarr;</span>
-			</a>
-		</nav>
-	</footer>
-	{% endif %}
+		{% if page.previous.url or page.next.url %}
+			<footer class="post-footer mt4 has-border-top-offwhite">
+				<nav>
+					{% if page.next.url %}{% assign link = page.next %}
+					{% endif %}
+					{% if page.previous.url %}{% assign link = page.previous %}
+					{% endif %}
+					<a href="{{link.url}}" class="is-flex is-centered is-spread is-link-wrapper has-bg-offwhite p1 has-text-white-hover has-bg-accent-hover">
+						<span class="is-fs-0 m0">{{link.title}}</span>
+						<span class="pl1 m0">&rarr;</span>
+					</a>
+				</nav>
+			</footer>
+		{% endif %}
+
+	</section>
 </article>

@@ -1,0 +1,30 @@
+@each $label,$value in $spacing-sizes
+	@each $letter,$direction in ('t':'top', 'r':'right', 'b':'bottom', 'l':'left')
+		.p#{$letter}#{$label}
+			+bp-responsive
+				padding-#{$direction}: $value
+		.m#{$letter}#{$label}
+			+bp-responsive
+				margin-#{$direction}: $value
+	.p#{$label}
+		+bp-responsive
+			padding: $value
+	.pv#{$label}
+		+bp-responsive
+			padding-top: $value
+			padding-bottom: $value
+	.ph#{$label}
+		+bp-responsive
+			padding-right: $value
+			padding-left: $value
+	.m#{$label}
+		+bp-responsive
+			margin: $value
+	.mv#{$label}
+		+bp-responsive
+			margin-top: $value
+			margin-bottom: $value
+	.mh#{$label}
+		+bp-responsive
+			margin-right: $value
+			margin-left: $value

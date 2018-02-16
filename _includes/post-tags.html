@@ -1,0 +1,7 @@
+<footer class="pt2">
+    <nav class="tags">
+        {% for tag in page.tags %}
+            <a href="/tags/{{tag | slugify}}" class="tag button btn-small is-accent has-text-white is-primary-hover is-tracked-caps is-size-8">{{tag}}</a>
+        {% endfor %}
+    </nav>
+</footer>

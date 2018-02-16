@@ -17,23 +17,9 @@ layout: base
 	</header>
 
 	<section class="post-body pv4 content container-pad">
-		{% if page.image.src %}
-		<figure class="m0 p0">
-			<img src="{{page.image.src}}" alt="{{page.image.alt | default: page.title }}">
-			{% if page.image.caption %}
-				<figcaption>{{page.image.caption}}</figcaption>
-			{% endif %}
-		</figure>
-		{% endif %}
-
+		{% include featured-image.html %}
 		{{content}}
-		<footer class="pt4">
-			<nav class="tags">
-			{% for tag in page.tags %}
-				<a href="/tags/{{tag | slugify}}" class="tag button is-tracked-caps is-size-8">{{tag}}</a>	
-			{% endfor %}
-			</nav>
-		</footer>
+		{% include post-tags.html %}
 	</section>
 
 	{% if page.previous.url or page.next.url %}

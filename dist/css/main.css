@@ -2083,7 +2083,8 @@ h6 {
 }
 
 .content figure,
-.content blockquote {
+.content blockquote,
+.content .embed-container {
   margin-left: -2rem !important;
 }
 

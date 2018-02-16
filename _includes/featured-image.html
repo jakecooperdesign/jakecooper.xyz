@@ -1,0 +1,8 @@
+{% if page.image.src %}
+    <figure class="m0 p0">
+        <img src="{{page.image.src}}" alt="{{page.image.alt | default: page.title }}">
+        {% if page.image.caption %}
+            <figcaption>{{page.image.caption}}</figcaption>
+        {% endif %}
+    </figure>
+{% endif %}

@@ -1,29 +1,16 @@
 <article class="post-tease p4 has-border-top-offwhite">
 	<header class="post-header is-flex-md is-centered">
-		<p class="is-size-7 is-tracked-caps m0 is-1-md has-text-accent">{{post.date | date: "%y / %m"}}</p>
+		<p class="is-size-7 is-tracked-caps m0 is-1-md has-text-accent">{{page.date | date: "%y / %m"}}</p>
 		<h3 class="m0 is-expanded is-size-2">
-			<a href="{{post.url}}" class="is-link-wrapper">{{post.title}}</a>
+			<a href="{{page.url}}" class="is-link-wrapper">{{page.title}}</a>
 		</h3>
 	</header>
 	<section class="post-body is-offset-1">		
 		<div class="content has-text-grey pt2 pb4">
-			{% if post.image.src %}
-				<figure class="m0 p0">
-					<img src="{{post.image.src}}" alt="{{post.image.alt | default: post.title }}">
-					{% if post.image.caption %}
-					<figcaption>{{post.image.caption}}</figcaption>
-					{% endif %}
-				</figure>
-			{% endif %}
-			{{post.excerpt}}
-			<footer class="pt2">
-				<nav class="tags">
-				{% for tag in post.tags %}
-					<a href="/tags/{{tag | slugify}}" class="tag button btn-small is-accent has-text-white is-primary-hover is-tracked-caps is-size-8">{{tag}}</a>	
-				{% endfor %}
-				</nav>
-			</footer>
+			{% include featured-image.html %}
+			{{page.excerpt}}
+			{% include post-tags.html tags=page.tags %}
 		</div>
-		<p><a href="{{post.url}}" class="is-link-wrapper has-text-accent has-text-primary-hover">Keep Reading&ensp;&rarr;</a></p>
+		<p><a href="{{page.url}}" class="is-link-wrapper has-text-accent has-text-primary-hover">Keep Reading&ensp;&rarr;</a></p>
 	</section>
 </article>				

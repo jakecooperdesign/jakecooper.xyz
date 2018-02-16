@@ -2,6 +2,7 @@
 title: About
 date: 2018-02-15 21:12:00 Z
 permalink: "/about/"
+is in nav: true
 layout: post
 ---
 

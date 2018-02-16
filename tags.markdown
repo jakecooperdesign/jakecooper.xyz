@@ -7,11 +7,9 @@ order: 2
 layout: post
 ---
 
-<ul>
-{% for category in categories %}
-{% assign category_name = category\[0\] %}
-<li>
-<a href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
-</li>
-{% endfor %}
+{% assign tags = site.tags | sort %}
+<ul class="is-unstyled">
+  {% for item in tags %}
+    <li><a class="is-link-wrapper" href="/tags/{{item[0] | slugify}}">{{item[0]}}</a></li>
+  {% endfor %}
 </ul>

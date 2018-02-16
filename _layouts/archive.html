@@ -1,0 +1,20 @@
+---
+layout: base
+---
+<header class="p4">
+	<div class="columns">
+		<div class="column is-offset-1">
+			<h1>
+				<span class="is-tracked-caps is-size-7 has-text-light">{{page.type}}: </span>
+				<span class="has-text-accent is-size-2 is-block">{{ page.title }}</span>
+			</h1>
+		</div>
+	</div>
+</header>
+<article class="page">
+	<section class="articles">
+		{% for page in page.posts %}
+			{% include post-tease.html %}
+		{% endfor %}
+	</section>
+</article>

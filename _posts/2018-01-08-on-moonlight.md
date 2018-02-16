@@ -18,11 +18,11 @@ I watched *Moonlight* last night for the first time and really enjoyed it. Where
 
 I knew some pieces of the story — time jumps, crisis of identity / sexuality within a black community — but was intrigued by how the film’s form and structure was used to depict the emotions of the characters. The film is filled to the brim with gorgeous, long shots with much of the dialogue dubbing multiple points of view unfolding in slow motion. 
 
+<!-- more -->
+
 {% oembed https://www.youtube.com/watch?v=Ot9DX5S8aHk %}
 
 Here’s a great video from [ScreenPrism](https://www.youtube.com/watch?v=Ot9DX5S8aHk) detailing how it all comes together. The movie says so much with so little, and uses the camera as a means of communicating internal thoughts.
-
-<!-- more -->
 
 Moonlight's release started a wave of high-art depictions of young black culture. In ScreenPrism’s video, the director, Barry Jenkins, talks about the flipping the script of showing the same old stories about growing up in poor neighborhoods. Instead Jenkins intended to bring “the arthouse to the hood” instead of the other way around. 
 

@@ -1,18 +1,23 @@
 <article class="post-tease p4 has-border-top-offwhite">
-	<header class="post-header is-flex-md is-centered">
-		<p class="is-size-7 is-tracked-caps m0 is-1-md has-text-accent">{{page.date | date: "%y / %m"}}</p>
-		<h3 class="m0 is-expanded is-size-2">
+	<header class="post-header columns is-centered">
+		<p class="is-size-7 is-tracked-caps m0 column is-1-md has-text-accent">{{page.date | date: "%y / %m"}}</p>
+		<h3 class="m0 column is-size-2">
 			<a href="{{page.url}}" class="is-link-wrapper">{{page.title}}</a>
 		</h3>
 	</header>
-	<section class="post-body">
-		<div class="content has-text-grey pt2">
-			{% include featured-image.html %}
-			{{ page.excerpt }}
+	<section class="post-body container">
+		<div class="columns">
+			<div class="column is-offset-1 pt2">
+				<div class="content has-text-grey">
+					{% include featured-image.html %}
+					{{ page.excerpt }}
+				</div>
+				
+				<p class="mt2">
+					<a href="{{page.url}}" class="is-link-wrapper has-text-accent has-text-primary-hover">Keep Reading&ensp;&rarr;</a>
+				</p>
+				{% include post-tags.html %}
+			</div>
 		</div>
-		<p class="mt2">
-			<a href="{{page.url}}" class="is-link-wrapper has-text-accent has-text-primary-hover">Keep Reading&ensp;&rarr;</a>
-		</p>
-		{% include post-tags.html %}
 	</section>
 </article>				

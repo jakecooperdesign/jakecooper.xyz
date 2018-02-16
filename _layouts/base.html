@@ -24,7 +24,8 @@
 						<p class="is-size-7 has-text-light is-font-serif mt1">{{site.description}}</p>
 					</header>
 					<nav id="site-nav" class="is-flex is-column mv2">
-						{% for page in site.pages %}
+						{% assign pages = site.pages | where: 'is_nav', 'true' | sort: 'order', 'last' %}
+						{% for page in pages %}
 						<a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a>
 						{% endfor %}
 					</nav>

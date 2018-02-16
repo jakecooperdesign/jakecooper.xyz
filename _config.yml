@@ -8,6 +8,13 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    excerpt_separator: "<!-- more -->"
 email: jake@jakecooperdesign
 description: Thoughts on design, pop culture, screens, art, music, and media.
 baseurl: 
@@ -46,11 +53,3 @@ plugins:
 - jekyll-feed
 - jekyll-sitemap
 - jekyll_oembed
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "post"
-      excerpt_separator: <!-- more -->

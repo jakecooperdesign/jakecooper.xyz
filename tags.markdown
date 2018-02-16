@@ -2,7 +2,8 @@
 title: Tags
 date: 2018-02-16 21:12:00 Z
 permalink: "/tags/"
-is in nav: true
+is_nav: true
+order: 2
 layout: post
 ---
 

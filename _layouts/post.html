@@ -27,10 +27,17 @@ layout: base
 		{% endif %}
 
 		{{content}}
+		<footer class="pt4">
+			<nav class="tags">
+			{% for tag in page.tags %}
+				<a href="/tags/{{tag | slugify}}" class="tag button is-tracked-caps is-size-8">{{tag}}</a>	
+			{% endfor %}
+			</nav>
+		</footer>
 	</section>
 
 	{% if page.previous.url or page.next.url %}
-	<footer class="post-footer mt4 pv4 container-pad">
+	<footer class="post-footer pv4 container-pad">
 		<nav class="content-width-base">
 			{% if page.next.url %}{% assign link = page.next %}{% endif %}
 			{% if page.previous.url %}{% assign link = page.previous %}{% endif %}

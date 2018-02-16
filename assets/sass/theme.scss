@@ -23,8 +23,11 @@ $size-4: 1.25rem;
 $size-5: 1.125rem;
 $size-6: 1rem;
 $size-7: .75rem;
+$size-8: .65rem;
 
-$font-sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7;
+$font-sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8;
+
+$button-padding-small: .4em .8em;
 
 $colors: (
 	white: white, 

@@ -41,29 +41,7 @@ var config = {
             '!node_modules',
         ]
     }
-}
-
-// var paths = {
-//     sass_dir: 'assets/sass',
-//     sass_main: 'assets/sass/main.scss',
-//     css_dir: 'dist/css',
-//     base_dir: '_site',
-//     globs: {
-//         sass: [
-//             'assets/**/*.scss',
-//             'assets/**/*.sass'
-//         ],
-//         content: [
-//             '**/*.html', 
-//             '**/*.md',
-//             '**/*.markdown',
-//             'assets/js/**/*.js',
-//             '!_site/**/*',
-//             '!assets',
-//             '!node_modules',
-//         ]
-//     }
-// };
+};
 
 /**
  * Build the Jekyll Site
@@ -112,9 +90,10 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function(){
     return gulp.src(config.js.index)
-        .pipe(webpack({ output: { filename:'bundle.js' } }))
+        .pipe(browserify({
+            insertGlobals: true,
+        }))
         .pipe(gulp.dest(config.js.dest))
-        .pipe(gulp.dest(config.content.base_dir + '/' + config.js.dest))
 })
 
 /**

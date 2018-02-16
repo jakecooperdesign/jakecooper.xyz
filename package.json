@@ -22,8 +22,10 @@
   "dependencies": {
     "animejs": "^2.2.0",
     "barba.js": "^1.0.0",
+    "fitvids": "^2.0.0",
     "gulp-browserify": "^0.5.1",
     "gulp-webpack": "^1.5.0",
-    "jcd-bootstrap": "https://github.com/jakecooperdesign/jcd-bootstrap"
+    "jcd-bootstrap": "https://github.com/jakecooperdesign/jcd-bootstrap",
+    "jquery": "^3.3.1"
   }
 }

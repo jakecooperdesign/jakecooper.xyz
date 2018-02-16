@@ -13,7 +13,13 @@ layout: post
 
 I watched *Moonlight* last night for the first time and really enjoyed it. Where other best picture-nominated films are overblown with complicated stories and flimsy characters I was most enamored by *Moonlight*’s simplicity.
 
-I knew some pieces of the story — time jumps, crisis of identity / sexuality within a black community — but was intrigued by how the film’s form and structure was used to depict the emotions of the characters. The film is filled to the brim with gorgeous, long shots with much of the dialogue dubbing multiple points of view unfolding in slow motion. Here’s a great video from [ScreenPrism](https://www.youtube.com/watch?v=Ot9DX5S8aHk) detailing how it all comes together. The movie says so much with so little, and uses the camera as a means of communicating internal thoughts.
+I knew some pieces of the story — time jumps, crisis of identity / sexuality within a black community — but was intrigued by how the film’s form and structure was used to depict the emotions of the characters. The film is filled to the brim with gorgeous, long shots with much of the dialogue dubbing multiple points of view unfolding in slow motion. 
+
+{% oembed https://www.youtube.com/watch?v=Ot9DX5S8aHk %}
+
+Here’s a great video from [ScreenPrism](https://www.youtube.com/watch?v=Ot9DX5S8aHk) detailing how it all comes together. The movie says so much with so little, and uses the camera as a means of communicating internal thoughts.
+
+<!-- more -->
 
 Moonlight's release started a wave of high-art depictions of young black culture. In ScreenPrism’s video, the director, Barry Jenkins, talks about the flipping the script of showing the same old stories about growing up in poor neighborhoods. Instead Jenkins intended to bring “the arthouse to the hood” instead of the other way around. The same could be said of Kendrik Lamar’s music video for *[Element](https://www.youtube.com/watch?v=glaG64Ao7sM)*, which released the year following Moonlight's release. Largely inspired by, and frequently referencing, the works of [Gordon Parks](http://time.com/4200148/gordon-parks-photographs-black-humanity/), *Element.* unfolds in vignettes both raw and violent, but beautifully framed and composed. It begs the viewer to question what is beautiful and what is real.
 

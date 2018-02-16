@@ -2090,6 +2090,14 @@ h6 {
   line-height: 1.4;
 }
 
+.content .embed-container:not(:last-child) {
+  margin-bottom: 2.625rem;
+}
+
+.content .embed-container:not(:first-child) {
+  margin-top: 2.625rem;
+}
+
 .content blockquote {
   padding: 0 2rem;
   margin: 4rem 0;

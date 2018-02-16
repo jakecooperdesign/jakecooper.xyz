@@ -8,10 +8,11 @@ tags:
 - Jay-Z
 - Kendrik Lamar
 - Barry Jenkins
-layout: post
+- Video
 image:
   src: https://cdn.vox-cdn.com/thumbor/AI-aTrc2MN2fbWF81NdnVrn5Pfs=/0x0:2000x1333/1200x800/filters:focal(0x0:2000x1333)/cdn.vox-cdn.com/uploads/chorus_image/image/50857689/moonlightBeach.0.0.jpg
   alt: Moonlight
+layout: post
 ---
 
 I watched *Moonlight* last night for the first time and really enjoyed it. Where other best picture-nominated films are overblown with complicated stories and flimsy characters I was most enamored by *Moonlight*’s simplicity.

@@ -15,6 +15,7 @@ defaults:
   values:
     layout: post
     excerpt_separator: "<!-- more -->"
+    permalink: "/:title/"
 email: jake@jakecooperdesign
 description: Thoughts on design, pop culture, screens, art, music, and media.
 baseurl: 

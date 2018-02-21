@@ -1,6 +1,7 @@
 ---
 title: Media Diet, February 2018 Edition
 date: 2018-02-21 12:34:00 Z
+permalink: "/media-diet-february-2018-edition/"
 tags:
 - media diet
 - movies
